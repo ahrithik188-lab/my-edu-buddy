@@ -1,15 +1,18 @@
 <h2>MY EDU BUDDY LOGIN</h2>
 
-<form method="POST">
-    Username: <input name="username"><br><br>
-    Password: <input type="password" name="password"><br><br>
+<form method="POST" autocomplete="off">
+    Username:
+    <input type="text" name="username" autocomplete="off"><br><br>
+
+    Password:
+    <input type="password" name="password" autocomplete="new-password"><br><br>
 
     Role:
-    <select name="role">
+    <select name="role" autocomplete="off">
         <option value="STUDENT">Student</option>
         <option value="TEACHER">Teacher</option>
         <option value="TECHADMIN">Tech Admin</option>
     </select><br><br>
 
-    <button>Login</button>
+    <button type="submit">Login</button>
 </form>
