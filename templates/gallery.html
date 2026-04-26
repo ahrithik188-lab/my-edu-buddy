@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/static/style.css">
+{% include "dashboard.html" %}
+
+<div class="main">
+<h2>Gallery</h2>
+
+{% if session.role == "TEACHER" %}
+<form method="POST" enctype="multipart/form-data">
+<input type="file" name="image">
+<button>Upload</button>
+</form>
+{% endif %}
+
+{% for img in data %}
+<img src="/static/uploads/{{img.filename}}" width="120">
+{% endfor %}
+</div>

@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/static/style.css">
+{% include "dashboard.html" %}
+
+<div class="main">
+<h2>Report</h2>
+
+{% if session.role == "TEACHER" %}
+<form method="POST">
+<input name="student">
+<input name="marks">
+<button>Add</button>
+</form>
+{% endif %}
+
+{% for r in data %}
+<div class="card">{{r.student}} - {{r.marks}}</div>
+{% endfor %}
+</div>

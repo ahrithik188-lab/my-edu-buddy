@@ -1,0 +1,21 @@
+<h2>ADMIN PANEL</h2>
+
+<form method="POST">
+    Username: <input name="username">
+    Password: <input name="password">
+
+    <select name="role">
+        <option value="STUDENT">Student</option>
+        <option value="TEACHER">Teacher</option>
+    </select>
+
+    <button>Add</button>
+</form>
+
+<ul>
+{% for u in users %}
+<li>{{u.username}} - {{u.role}}</li>
+{% endfor %}
+</ul>
+
+<a href="/logout">Logout</a>
